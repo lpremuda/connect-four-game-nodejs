@@ -44,9 +44,6 @@ class Board {
         this.cellArray[rowNum][colNum] = token
         this.xPlaysNext = !this.xPlaysNext
         this.win = this.checkForWinner(rowNum,colNum,token)
-        if (this.win) {
-          return console.log(`Player ${token} wins!`)
-        }
         break;
       }
     }
@@ -198,6 +195,7 @@ function playConnectFour() {
   // Instantiate board
   board = new Board(7,6);
 
+  console.log('\nStarting Connect Four Console Game!\n')
   board.printBoard();
 
   while (!board.win) {
@@ -218,10 +216,12 @@ function playConnectFour() {
     if (Number.isInteger(colNum) && colNum>=0 && colNum<=board.cellArray[0].length-1) {
       board.dropToken(colNum);
     }
+
     board.printBoard();
   }
 
-  console.log('\nGame is over!\n');
+  console.log(`Player ${!board.xPlaysNext ? 'X' : 'O'} wins!\n`)
+  console.log('Game is over!\n');
 }
 
 playConnectFour();

@@ -1,7 +1,6 @@
-# connect-four-game-nodejs
-Connect Four Game using Javascript and Node.js
+# Connect Four Console Game (Node.js)
 
-Instructions to download and use:
+Instructions on how to download and use:
 1. git clone <this_repository> <folder_name>
 2. npm install (installs 'readline-sync' package)
 3. node index.js
